@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Attendance System</h1>
+    <p>Manage Students, Programs and Attendance</p>
+</header>
+
+<div class="container">
+
+    <h2>Dashboard</h2>
+
+    <div class="dashboard">
+        <div class="card">
+            <h3>Total Programs</h3>
+            <h2 id="totalPrograms">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Students</h3>
+            <h2 id="totalStudents">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Present Today</h3>
+            <h2 id="totalPresent">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Absent Today</h3>
+            <h2 id="totalAbsent">0</h2>
+        </div>
+    </div>
+
+    <section class="panel">
+        <h2>Add Program</h2>
+
+        <form id="programForm">
+            <input type="text" id="programName"
+                   placeholder="Enter program name" required>
+            <button type="submit">Add Program</button>
+        </form>
+
+        <ul id="programList"></ul>
+    </section>
+
+    <section class="panel">
+        <h2>Register Student</h2>
+
+        <form id="studentForm">
+            <input type="text" id="studentName"
+                   placeholder="Full Name" required>
+
+            <input type="email" id="studentEmail"
+                   placeholder="Email Address" required>
+
+            <input type="text" id="studentNumber"
+                   placeholder="Student ID Number" required>
+
+            <select id="studentProgram" required>
+                <option value="">Select Program</option>
+            </select>
+
+            <button type="submit">Add Student</button>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Mark Attendance</h2>
+
+        <form id="attendanceForm">
+            <select id="attendanceStudent" required>
+                <option value="">Select Student</option>
+            </select>
+
+            <input type="date" id="attendanceDate" required>
+
+            <select id="attendanceStatus" required>
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+            </select>
+
+            <button type="submit">Save Attendance</button>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Student Records</h2>
+
+        <input type="text" id="searchStudent"
+               placeholder="Search student...">
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Program</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Attendance Records</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>Student Attendance Management System</p>
+        <p>Developed using HTML, CSS and JavaScript</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+  </html>
+  
